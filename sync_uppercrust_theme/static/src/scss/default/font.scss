@@ -1,0 +1,12 @@
+$lato-font-path: '../fonts';
+
+@mixin lato-font() {
+    @font-face {
+        font-family: "open-light";
+        font-style: normal;
+        font-weight: 400;
+        src: url("/sync_uppercrust_theme/static/src/fonts/OpenSans-Light.woff") format("woff");
+    }
+}
+
+@include lato-font();

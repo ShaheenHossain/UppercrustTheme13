@@ -1,0 +1,25 @@
+.glass {
+    width: 333px;
+    height: 333px;
+    float: left;
+    border-radius: 171.5px;
+    border: 5px solid rgb(255, 255, 255);
+    position: absolute;
+    left: 287.5px;
+    display: block;
+    background-position: -535.5px -375.5px;
+    background-repeat: no-repeat;
+    /*z-index: 1000;*/
+    box-shadow: 0 21px 19px rgba(0,0,0,.25);
+    cursor: none;
+}
+.glass:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/sync_uppercrust_theme/static/src/img/zoom_glass.png') 6px 6px no-repeat;
+}

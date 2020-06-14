@@ -1,0 +1,38 @@
+$theme-color:       #f95386;
+$theme-sc-color:    #f95386;
+
+$theme-color-main:      #f95386;
+$theme-sc-color-main:       #f95386;
+
+$menu_active_color:     #000;
+$menu_color:        #FFFFFF;
+
+$theme-th-color:    #f95386;
+$button-hover:      #f95386;
+$heading-text:      #f95386;
+$heading-border:    $heading-text;
+$button-border:     $heading-text;
+$references-slider: transparent;
+$references-border: #F594B2;
+$brand-primary:     $heading-text;
+$select-color:      $theme-th-color;
+$textcolor:         #fff;
+$footercolor:       $heading-text;
+$block-hover:       rgba(249, 83, 134, 0.698);
+
+.master_background, header .navbar {
+    background: -webkit-linear-gradient(-45deg, 0%, 100%) !important;
+    background: linear-gradient(135deg, 0%, 100%) !important;
+    background-image: url(/sync_uppercrust_theme/static/src/img/pattern-a.png) !important;
+}
+
+$primary: $theme-color;
+$secondary: $theme-color;
+// Links
+
+$link-color: $theme-color !default;
+
+// Navbar
+$navbar-light-color: $menu_color !default;
+
+

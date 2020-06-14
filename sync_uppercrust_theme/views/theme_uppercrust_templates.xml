@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Remove Odoo bootstrap overridde -->
+        <template id="_assets_frontend_helpers" inherit_id="website._assets_frontend_helpers">
+            <xpath expr="//link[@href='/web_editor/static/src/scss/bootstrap_overridden.scss']" position="replace"/>
+            <xpath expr="//link[@href='/website/static/src/scss/bootstrap_overridden.scss']" position="replace"/>
+            <xpath expr="//link[last()]" position="after">
+                <link rel="stylesheet" href="/sync_uppercrust_theme/static/src/scss/default/font.scss"/>
+                <link rel="stylesheet" type="text/scss"
+                      href='/sync_uppercrust_theme/static/src/scss/default/variables.scss'/>
+            </xpath>
+        </template>
+        <template id="assets_frontend" inherit_id="website.assets_frontend" name="Uppercrust">
+            <xpath expr="//link[last()]" position="inside">
+                <link rel="stylesheet" href="/sync_uppercrust_theme/static/lib/animate/animate.css"/>
+                <link rel="stylesheet" href="/sync_uppercrust_theme/static/lib/odometer/odometer-theme-default.css"/>
+                <link rel="stylesheet" href="/sync_uppercrust_theme/static/lib/magnify/mag.css"/>
+                <script type="text/javascript" src="/sync_uppercrust_theme/static/lib/odometer/odometer.js"></script>
+                <script type="text/javascript"
+                        src="/sync_uppercrust_theme/static/lib/animate/jquery.viewportchecker.js"></script>
+                <script type="text/javascript" src="/sync_uppercrust_theme/static/lib/magnify/okzoom.js"></script>
+                <script type="text/javascript" src="/sync_uppercrust_theme/static/src/js/animation_root.js"></script>
+                <script type="text/javascript" src="/sync_uppercrust_theme/static/src/js/gallery.js"></script>
+                <script type="text/javascript" src="/sync_uppercrust_theme/static/src/js/carousel_default.js"></script>
+
+                <link rel="stylesheet" type="text/scss"
+                      href='/sync_uppercrust_theme/static/src/scss/default/uppercrust.scss' t-ignore="true"/>
+                <script type="text/javascript"
+                        src="/sync_uppercrust_theme/static/src/js/sync_uppercrust_theme.js"/>
+                <script type="text/javascript"
+                        src="/sync_uppercrust_theme/static/src/js/progressbar_snippet.js"/>
+                <script type="text/javascript"
+                        src="/sync_uppercrust_theme/static/src/js/counter_snippet.js"/>
+                <script type="text/javascript"
+                        src="/sync_uppercrust_theme/static/src/js/s_video_snippet.js"/>
+                <link rel="stylesheet" type="text/scss"
+                      href='/sync_uppercrust_theme/static/src/scss/default/variables.scss' t-ignore="true"/>
+                <link rel="stylesheet" type="text/scss" href='/sync_uppercrust_theme/static/src/scss/responsive.scss' t-ignore="true"/>
+            </xpath>
+        </template>
+        <template id="theme_customize" inherit_id="website.theme_customize">
+            <xpath expr="//div" position="replace">
+                <div>
+                    <content data-string="Themes" data-title="Uppercrust Themes">
+                        <opt data-xmlid="sync_uppercrust_theme.theme_default_variables" data-icon="/sync_uppercrust_theme/static/src/img/color_screen/default.jpg"/>
+                        <opt data-xmlid="sync_uppercrust_theme.theme_gg_variables"
+                             data-icon="/sync_uppercrust_theme/static/src/img/color_screen/green_grass.jpg"/>
+                        <opt data-xmlid="sync_uppercrust_theme.theme_mt_variables"
+                             data-icon="/sync_uppercrust_theme/static/src/img/color_screen/magenta_triangle.jpg"/>
+                        <opt data-xmlid="sync_uppercrust_theme.theme_rv_variables"
+                             data-icon="/sync_uppercrust_theme/static/src/img/color_screen/red_wine.jpg"/>
+                        <opt data-xmlid="sync_uppercrust_theme.theme_bn_variables"
+                             data-icon="/sync_uppercrust_theme/static/src/img/color_screen/black_night.jpg"/>
+                        <opt data-xmlid="sync_uppercrust_theme.theme_bs_variables"
+                             data-icon="/sync_uppercrust_theme/static/src/img/color_screen/blue_sky.jpg"/>
+                    </content>
+                </div>
+            </xpath>
+        </template>
+
+        <template id="uppercrust_header_view" inherit_id="website.layout" active="False" customize_show="True"
+                  name="Header Sticky">
+            <xpath expr="//div[@id='wrapwrap']" position="attributes">
+                <attribute name="js_class">sticky</attribute>
+            </xpath>
+        </template>
+        <template id="theme_default_variables" name="Default Theme" inherit_id="web._assets_frontend_helpers"
+                  active="True">
+            <xpath expr="//link[last()]" position="after">
+                <link rel="stylesheet" type="text/scss"
+                      href="/sync_uppercrust_theme/static/src/scss/customized_theme/variable_default.scss"/>
+                <link rel="stylesheet" type="text/scss"
+                      href='/sync_uppercrust_theme/static/src/scss/default/uppercrust.scss' t-ignore="true"/>
+            </xpath>
+        </template>
+        <template id="theme_rv_variables" name="Red Wine" inherit_id="web._assets_frontend_helpers" active="False">
+            <xpath expr="//link[last()]" position="after">
+                <link rel="stylesheet" type="text/scss"
+                      href="/sync_uppercrust_theme/static/src/scss/customized_theme/variable_rv.scss"/>
+                <link rel="stylesheet" type="text/scss"
+                      href='/sync_uppercrust_theme/static/src/scss/default/uppercrust.scss' t-ignore="true"/>
+            </xpath>
+        </template>
+        <template id="theme_bs_variables" name="Blue Sky" inherit_id="web._assets_frontend_helpers" active="False">
+            <xpath expr="//link[last()]" position="after">
+                <link rel="stylesheet" type="text/scss"
+                      href="/sync_uppercrust_theme/static/src/scss/customized_theme/variable_bs.scss"/>
+                <link rel="stylesheet" type="text/scss"
+                      href='/sync_uppercrust_theme/static/src/scss/default/uppercrust.scss' t-ignore="true"/>
+            </xpath>
+        </template>
+        <template id="theme_gg_variables" name="Green Grass" inherit_id="web._assets_frontend_helpers" active="False">
+            <xpath expr="//link[last()]" position="after">
+                <link rel="stylesheet" type="text/scss"
+                      href="/sync_uppercrust_theme/static/src/scss/customized_theme/variable_gg.scss"/>
+                <link rel="stylesheet" type="text/scss"
+                      href='/sync_uppercrust_theme/static/src/scss/default/uppercrust.scss' t-ignore="true"/>
+            </xpath>
+        </template>
+        <template id="theme_mt_variables" name="Megenta Triangle" inherit_id="web._assets_frontend_helpers"
+                  active="False">
+            <xpath expr="//link[last()]" position="after">
+                <link rel="stylesheet" type="text/scss"
+                      href="/sync_uppercrust_theme/static/src/scss/customized_theme/variable_mt.scss"/>
+                <link rel="stylesheet" type="text/scss"
+                      href='/sync_uppercrust_theme/static/src/scss/default/uppercrust.scss' t-ignore="true"/>
+            </xpath>
+        </template>
+        <template id="theme_bn_variables" name="Black Night" inherit_id="web._assets_frontend_helpers" active="False">
+            <xpath expr="//link[last()]" position="after">
+                <link rel="stylesheet" type="text/scss"
+                      href="/sync_uppercrust_theme/static/src/scss/customized_theme/variable_bn.scss"/>
+                <link rel="stylesheet" type="text/scss"
+                      href='/sync_uppercrust_theme/static/src/scss/default/uppercrust.scss' t-ignore="true"/>
+            </xpath>
+        </template>
+
+        <template id="frontend_layout_footer" inherit_id="portal.frontend_layout">
+            <xpath expr="//nav[hasclass('navbar')]" position="attributes">
+                <attribute name="class">navbar navbar-expand-md navbar-light bg-light master_background</attribute>
+            </xpath>
+            <xpath expr="//div[@id='footer']" position="replace">
+                <div id="cu-footer"
+                     class="container hidden-print top-footer d-flex flex-row justify-content-center align-item-center">
+                    <div class="row">
+                        <div class="col-md-12 oe_structure"/>
+                        <div class="text-center oe_cu_info w-100">
+                            <span class="top-footer-img">
+                                <img src="/sync_uppercrust_theme/static/src/img/footer-b.png"
+                                     t-att-alt="'Logo of %s' % res_company.name" t-att-title="res_company.name"/>
+                            </span>
+                            <h3 class="mb32">Follow us</h3>
+                        </div>
+                        <div class="oe_snippet_body oe_share text-center oe_cu_share w-100">
+                            <h3>
+                                <a target="_Blank" class="oe_share_facebook"
+                                   href="https://www.facebook.com/sharer/sharer.php?u={url}">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                                <a target="_Blank" class="oe_share_twitter"
+                                   href="https://twitter.com/intent/tweet?text={title}&amp;url={url}">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+                                <a target="_Blank" class="oe_share_linkedin"
+                                   href="http://www.linkedin.com/shareArticle?mini=true&amp;url={url}&amp;title={title}&amp;">
+                                    <i class="fa fa-linkedin"></i>
+                                </a>
+                                <a target="_Blank" class="oe_share_google"
+                                   href="https://plus.google.com/share?url={url}">
+                                    <i class="fa fa-google-plus"></i>
+                                </a>
+                                <a href="mailto:?body={url}&amp;subject={title}">
+                                    <i class="fa fa-envelope-o"></i>
+                                </a>
+                            </h3>
+                        </div>
+                        <div class="col-md-3" id="info" style="display:none;">
+                            <h4>Connect with us</h4>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="/page/website.contactus">Contact us</a>
+                                </li>
+                            </ul>
+                            <ul class="list-unstyled">
+                                <li t-ignore="true">
+                                    <i class="fa fa-phone"></i>
+                                    <span t-field="res_company.phone"></span>
+                                </li>
+                                <li t-ignore="true">
+                                    <i class="fa fa-envelope"></i>
+                                    <span t-field="res_company.email"></span>
+                                </li>
+                            </ul>
+                            <h2>
+                                <a t-att-href="website.social_facebook" t-if="website.social_facebook">
+                                    <i class="fa fa-facebook-square"/>
+                                </a>
+                                <a t-att-href="website.social_twitter" t-if="website.social_twitter">
+                                    <i class="fa fa-twitter"/>
+                                </a>
+                                <a t-att-href="website.social_linkedin" t-if="website.social_linkedin">
+                                    <i class="fa fa-linkedin"/>
+                                </a>
+                                <a t-att-href="website.social_youtube" t-if="website.social_youtube">
+                                    <i class="fa fa-youtube-play"/>
+                                </a>
+                                <a t-att-href="website.social_github" t-if="website.social_github">
+                                    <i class="fa fa-github"/>
+                                </a>
+                            </h2>
+                        </div>
+                        <div class="text-center w-100">
+                            <div>
+                                <span class="app-store-img mb8">
+                                    <a href="#">
+                                        <img src="/sync_uppercrust_theme/static/src/img/odoo_store.png"
+                                             title="Odoo Store"/>
+                                    </a>
+                                    <a href="#">
+                                        <img src="/sync_uppercrust_theme/static/src/img/sync_store.png"
+                                             title="Synconics App Store"/>
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+        </template>
+    </data>
+</odoo>

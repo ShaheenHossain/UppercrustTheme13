@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Features > Magnify Image -->
+        <template id="s_magnify" name="Magnify Image">
+            <section class="oe_snippet_body s_magnify">
+                <div class="container">
+                    <div class="st-magnify row post" data-vp-add-class="visible animated zoomIn"
+                         data-vp-remove-class="hidebefore" data-vp-add-class-full-view="full-visible"
+                         data-vp-repeat="false" data-vp-offset="100">
+                        <div class="col-md-12 product">
+                            <img class="magniflier" src="/sync_uppercrust_theme/static/src/img/zoom.png"
+                                 alt="Odoo CMS - a picture"/>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <template id="snippets_inherit_magnify" inherit_id="website.snippets">
+            <xpath expr="//div[@id='snippet_feature']/div[hasclass('o_panel_body')]" position="inside">
+                <t t-snippet="sync_uppercrust_theme.s_magnify"
+                   t-thumbnail="/sync_uppercrust_theme/static/src/img/icon/magnifir.png"/>
+            </xpath>
+        </template>
+    </data>
+</odoo>

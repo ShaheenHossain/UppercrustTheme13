@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Content > Progressbar -->
+        <template id="s_progressbar" name="Progressbar">
+            <section class="oe_snippet_body s_title_hr">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="st-heading-a w-100">
+                                <h5 class="st_master_text_color"><b>Lorem ipsom</b></h5>
+                            </div>
+                            <div class="s_progressbar st-progressbar w-100 text-center">
+                                <div class="pro-bar-container pro-bar-candy candy-ltr color-green-sea w-80">
+                                    <div class="progress-bar pro-bar color-turquoise bar-0"
+                                         data-pro-bar-delay="800" data-pro-bar-percent="0"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <template id="snippets_inherit_progress" inherit_id="website.snippets">
+            <xpath expr="//div[@id='snippet_content']/div[hasclass('o_panel_body')]" position="inside">
+                <t t-snippet="sync_uppercrust_theme.s_counter"
+                   t-thumbnail="/sync_uppercrust_theme/static/src/img/icon/counter.png"/>
+            </xpath>
+        </template>
+    </data>
+</odoo>

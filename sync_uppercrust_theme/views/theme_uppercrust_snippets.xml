@@ -1,0 +1,587 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <odoo>
+        <data>
+            <template id="snippets" inherit_id="website.snippets">
+                <xpath expr="//t[@t-snippet='website.s_carousel']" position="replace">
+                    <t t-snippet="website.s_carousel" t-thumbnail="/sync_uppercrust_theme/static/src/img/icon/banner.png"/>
+                </xpath>
+                <xpath expr="//t[@t-snippet='website.s_title']" position="replace">
+                    <t t-snippet="website.s_title"
+                       t-thumbnail="/sync_uppercrust_theme/static/src/img/icon/block_title.png"/>
+                </xpath>
+                <xpath expr="//t[@t-snippet='website.s_share']" position="replace">
+                    <t t-snippet="website.s_share"
+                       t-thumbnail="/sync_uppercrust_theme/static/src/img/icon/block_button.png"/>
+                </xpath>
+                <xpath expr="//t[@t-snippet='website.s_comparisons']" position="replace">
+                    <t t-snippet="website.s_comparisons"
+                       t-thumbnail="/sync_uppercrust_theme/static/src/img/icon/block_comparison.png"/>
+                </xpath>
+                <xpath expr="//t[@t-snippet='website.s_references']" position="replace">
+                    <t t-snippet="website.s_references"
+                       t-thumbnail="/sync_uppercrust_theme/static/src/img/icon/block_references.png"/>
+                </xpath>
+                <xpath expr="//t[@t-snippet='website.s_text_block']" position="replace">
+                    <t t-snippet="website.s_text_block"
+                       t-thumbnail="/sync_uppercrust_theme/static/src/img/icon/block_text_block.png"/>
+                </xpath>
+            </template>
+            <template id="s_carousel" inherit_id="website.s_carousel">
+                <xpath expr="//div[hasclass('s_carousel')]" position="replace">
+                    <div id="myCarousel"
+                         class="s_banner oe_custom_bg master_background s_carousel s_carousel_default carousel slide"
+                         data-interval="10000">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active"/>
+                        </ol>
+                        <!-- Content -->
+                        <div class="carousel-inner">
+                            <!-- #01 -->
+                            <div class="carousel-item active oe_custom_bg oe_img_bg"
+                                 data-name="Slide">
+                                <div class="container">
+                                    <div class="row content">
+                                        <div class="carousel-img col-xs-12  col-md-5 oe_img_div post"
+                                             data-vp-add-class="visible animated bounceInLeft"
+                                             data-vp-remove-class="hidebefore"
+                                             data-vp-add-ctlass-full-view="full-visible" data-vp-repeat="false"
+                                             data-vp-offset="100">
+                                            <img class="img-responsive oe_mobile_img"
+                                                 src="/sync_uppercrust_theme/static/src/img/phone_hr.png"
+                                                 alt="Banner fcandy-ltr {Synconics Image"/>
+                                        </div>
+                                        <div
+                                                class="carousel_text col-xs-12 col-md-7 oe_txt_div post"
+                                                data-vp-add-class="visible animated bounceInDown"
+                                                data-vp-remove-class="hidebefore" data-vp-add-class-full-view="full-visible"
+                                                data-vp-repeat="false" data-vp-offset="100">
+                                            <h2>
+                                                <span>upper</span>crust theme
+                                            </h2>
+                                            <p>a beautiful responsive odoo website theme.</p>
+                                            <div class="row post o_cu_buttons"
+                                                 data-vp-add-class="visible animated bounceInUp"
+                                                 data-vp-remove-class="hidebefore"
+                                                 data-vp-add-class-full-view="full-visible" data-vp-repeat="false"
+                                                 data-vp-offset="100">
+                                                <div class="col-xs-12 col-md-4 oe_btn_div_odoo mb-3">
+                                                    <img href="#" class="oe_cu_btn_odoo"
+                                                         src="/sync_uppercrust_theme/static/src/img/btn1.png"/>
+                                                </div>
+                                                <div class="col-xs-12 col-md-4 oe_btn_div mb-3">
+                                                    <img href="#" class="oe_cu_btn_sync"
+                                                         src="/sync_uppercrust_theme/static/src/img/btn2.png"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Controls -->
+                        <div class="carousel-control-prev" data-target="#myCarousel" data-slide="prev" role="img"
+                             aria-label="Previous" title="Previous">
+                            <span class="carousel-control-prev-icon"/>
+                            <span class="sr-only">Previous</span>
+                        </div>
+                        <div class="carousel-control-next" data-target="#myCarousel" data-slide="next" role="img"
+                             aria-label="Next" title="Next">
+                            <span class="carousel-control-next-icon"/>
+                            <span class="sr-only">Next</span>
+                        </div>
+                    </div>
+                </xpath>
+            </template>
+
+            <!-- Structure > Feature -->
+            <template id="s_features_inherit" inherit_id="website.s_features">
+                <xpath expr="//section" position="replace">
+                    <section class="oe_snippet_body mb16 s_features">
+                        <div class="container post d-flex" data-vp-add-class="visible animated zoomIn"
+                             data-vp-remove-class="hidebefore" data-vp-add-class-full-view="full-visible"
+                             data-vp-repeat="false" data-vp-offset="100">
+                            <div class="col-xs-12 col-md-4 col-sm-4 text-center o_feature">
+                                <div class="oe_cu_fa_support_first">
+                                    <span class="fa fa-support fa-5x st_feature"/>
+                                </div>
+                                <div class="o_fa_content">
+                                    <h3 class="mt8 mb8 st-feature-title">
+                                        <span class="strong">Support</span>
+                                    </h3>
+                                    <div class="text-muted">Consectetuer adipiscing elit, sed diam nonummy
+                                        nibh euismod tincidunt ut
+                                        laoreet dolore magna aliquam erat.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-md-4 col-sm-4 text-center o_feature">
+                                <div class="oe_cu_fa_support_second">
+                                    <span class="fa fa-tablet fa-5x st_feature"/>
+                                </div>
+                                <div class="o_fa_content">
+                                    <h3 class="mt8 mb8 st-feature-title">
+                                        <span class="strong">Multi-device</span>
+                                    </h3>
+                                    <div class="text-muted">Consectetuer adipiscing elit, sed diam nonummy
+                                        nibh euismod tincidunt ut
+                                        laoreet dolore magna aliquam erat.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-md-4 col-sm-4 text-center o_feature">
+                                <div class="oe_cu_fa_support_third">
+                                    <span class="fa fa-files-o fa-5x st_feature"/>
+                                </div>
+                                <div class="o_fa_content">
+                                    <h3 class="mt8 mb8 st-feature-title">
+                                        <span class="strong">Updates</span>
+                                    </h3>
+                                    <div class="text-muted">Consectetuer adipiscing elit, sed diam nonummy
+                                        nibh euismod tincidunt ut
+                                        laoreet dolore magna aliquam erat.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </xpath>
+            </template>
+
+            <!-- Structure > One Column -->
+            <template id="s_blank_column" name="Blank Column">
+                <section class="oe_snippet_body">
+                    <div class="container">
+                        <div class="row mt16 mb16">
+                            <div class="col-md-6 pb-2 pt-2">
+                                <p>Put your own content here.</p>
+                                <div class="oe_structure"/>
+                            </div>
+                            <div class="col-md-6 pb-2 pt-2">
+                                <p>Put your own content here.</p>
+                                <div class="oe_structure"/>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </template>
+
+             <!-- Structure > Page Title -->
+            <template id="s_page_title" name="Page Title">
+                <section class="oe_snippet_body s_page_title master_background">
+                    <div class="container">
+                        <div class="col-md-12 text-center">
+                            <h1>Lorem</h1>
+                            <hr id="oe-hr"/>
+                        </div>
+                    </div>
+                </section>
+            </template>
+
+            <!-- Content > TextBlock -->
+            <template id="s_text_block_inherit" inherit_id="website.s_text_block" name="Text Block">
+                <xpath expr="//section" position="replace">
+                    <section class="s_text_block col-12">
+                        <div class="container text-block post" data-vp-add-class="visible animated zoomIn"
+                             data-vp-remove-class="hidebefore" data-vp-add-class-full-view="full-visible"
+                             data-vp-repeat="false" data-vp-offset="100">
+                            <p>
+                                Consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
+                                laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim
+                                veniam, quis nostrud exerci tation ullamcorper suscipit lobortis
+                                nisl ut aliquip.
+                            </p>
+                        </div>
+                    </section>
+                </xpath>
+            </template>
+
+            <!-- Content > Title -->
+            <template id="s_title_inherit" inherit_id="website.s_title" name="Title">
+                <xpath expr="//section" position="replace">
+                    <section class="s_title s_title_hr text-center s_text_image col-12">
+                        <div class="post container st_title" data-vp-add-class="visible animated zoomIn"
+                             data-vp-remove-class="hidebefore" data-vp-add-class-full-view="full-visible"
+                             data-vp-repeat="false" data-vp-offset="100">
+                            <div class="row">
+                                <div class="col-md-12 st-heading-a w-100">
+                                    <h3 class="st_master_text_color small">Services</h3>
+                                    <h3>
+                                        <span class="strong">Lorem ipsum</span>
+                                        dolor sit amet
+                                    </h3>
+                                </div>
+                                <div class="col-md-12">
+                                    <hr class="hr" align="center"/>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </xpath>
+            </template>
+
+            <!--Content > Well -->
+            <template id="s_well" name="Well">
+                <section class="s_text_image col-md-12 oe_snippet_body well pt32 pb32" >
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-lg-4 pt16 pb16 mb3  s_well s_well_space st-heading-a post" data-vp-add-class="visible animated zoomIn" data-vp-remove-class="hidebefore" data-vp-add-class-full-view="full-visible"
+                                         data-vp-repeat="false" data-vp-offset="100">
+                                <span class="no">1</span>
+                                <h3>
+                                    <span class="strong">Lorem ipsum</span>
+                                </h3>
+                                <div class="text-muted">
+                                    Consectetuer adipiscing elit, sed diam nonummy
+                                </div>
+                            </div>
+                            <div class="col-lg-4 pt16 pb16 mb3  s_well s_well_space st-heading-a post" data-vp-add-class="visible animated zoomIn" data-vp-remove-class="hidebefore" data-vp-add-class-full-view="full-visible"
+                                         data-vp-repeat="false" data-vp-offset="100">
+                                <span class="no">2</span>
+                                <h3>
+                                    <span class="strong">Lorem ipsum</span>
+                                </h3>
+                                <div class="text-muted">
+                                    Consectetuer adipiscing elit, sed diam nonummy
+                                </div>
+                            </div>
+                            <div class="col-lg-4 pt16 pb16 mb3  s_well s_well_space st-heading-a post" data-vp-add-class="visible animated zoomIn" data-vp-remove-class="hidebefore" data-vp-add-class-full-view="full-visible"
+                                         data-vp-repeat="false" data-vp-offset="100">
+                                <span class="no">3</span>
+                                <h3>
+                                    <span class="strong">Lorem ipsum</span>
+                                </h3>
+                                <div class="text-muted">
+                                    Consectetuer adipiscing elit, sed diam nonummy
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </template>
+
+            <!-- Content > Team Member -->
+            <template id="s_team_member" name="Team Member">
+                <section class="oe_snippet_body team_member s_text_image pb32 pt32">
+                    <div class="container">
+                        <div class="row">
+                            <div class="s_team_member col-md-4">
+                                <div class="oe_cu_overlay st-img-single oe_cu_st_img_single oe_single_div post" data-vp-add-class="visible animated zoomIn" data-vp-remove-class="hidebefore"
+                                data-vp-add-class-full-view="full-visible" data-vp-repeat="false"
+                                data-vp-offset="100">
+                                    <img class="img img-responsive shadow mb16 oe_single_img"
+                                         src="/sync_uppercrust_theme/static/src/img/team1.png"
+                                         alt="Odoo Team"/>
+                                    <div class="textbox oe_cu_outer_layer">
+                                        <div class="text">
+                                            <h4>
+                                                <span class="strong">John Smith</span>
+                                                <span class="small">digital designer</span>
+                                            </h4>
+                                            <p>Consectetuer adipiscing elit, sed diam nonummy nibh euismod
+                                                tincidunt ut laoreet dolore magna aliquam erat.
+                                            </p>
+                                        </div>
+                                        <div class="text-center oe_share">
+                                            <h5>
+                                                <a target="_Blank" class="oe_share_facebook"
+                                                   href="https://www.facebook.com/sharer/sharer.php?u={url}">
+                                                    <i class="fa fa-facebook"></i>
+                                                </a>
+                                                <a target="_Blank" class="oe_share_twitter"
+                                                   href="https://twitter.com/intent/tweet?text={title}&amp;url={url}">
+                                                    <i class="fa fa-twitter"></i>
+                                                </a>
+                                                <a target="_Blank" class="oe_share_linkedin"
+                                                   href="http://www.linkedin.com/shareArticle?mini=true&amp;url={url}&amp;title={title}&amp;">
+                                                    <i class="fa fa-linkedin"></i>
+                                                </a>
+                                            </h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </template>
+
+            <!-- Content > Image -->
+            <template id="s_image" name="Image">
+                <section class="oe_snippet_body s_text_block col-12">
+                    <div class="container text-block">
+                        <div class="row">
+                            <div class="post col-lg-12  s_image st-img text-center"
+                                 data-vp-add-class="visible animated bounceInDown"
+                                 data-vp-remove-class="hidebefore" data-vp-add-class-full-view="full-visible"
+                                 data-vp-repeat="false" data-vp-offset="100">
+                                <img class="img img-fluid" src="/sync_uppercrust_theme/static/src/img/big_picture.jpg"
+                                     alt="Odoo CMS - a big picture"/>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </template>
+
+            <!-- Features > Comparisons -->
+            <template id="s_comparisons_inherit" inherit_id="website.s_comparisons" name="Comparisons">
+                <xpath expr="//section" position="replace">
+                    <section class="s_comparisons oe_dark">
+                        <div class="container">
+                            <div class="row pb-5">
+                                <div class="col-md-12 text-center mt16 mb32">
+                                    <div class="st-comparison-title st_title post"
+                                         data-vp-add-class="visible animated zoomIn"
+                                         data-vp-remove-class="hidebefore" data-vp-add-class-full-view="full-visible"
+                                         data-vp-repeat="false" data-vp-offset="100">
+                                        <div class="st-heading-a">
+                                            <h3 class="text-center  st_master_text_color small">PLANS</h3>
+                                            <h3 class="text-center">
+                                                <span class="strong">Lorem ipsum</span>
+                                                dolor sit amet
+                                            </h3>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <hr class="hr" align="center"/>
+                                        </div>
+                                        <p>Prices for every pocket</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 w-100 main_contain d-flex align-item-center justify-content-center">
+                                    <div class="st-comparison col-md-4 col-lg-4 col-xs-12 text-center post d-flex align-item-center justify-content-center"
+                                         data-vp-add-class="visible animated zoomIn"
+                                         data-vp-remove-class="hidebefore" data-vp-add-class-full-view="full-visible"
+                                         data-vp-repeat="false" data-vp-offset="100">
+                                        <div class="panel panel-info">
+
+                                            <div class="panel-heading text-center">
+                                                <h4 style="margin: 0">Trial</h4>
+                                                <span>Free</span>
+                                            </div>
+                                            <ul class="list-group">
+                                                <li class="list-group-item">60 day free trial</li>
+                                                <li class="list-group-item">Functional Offline</li>
+                                                <li class="list-group-item">Synced to cloud database</li>
+                                                <li class="list-group-item">No support</li>
+                                            </ul>
+                                            <div class="text-center">
+                                                <a href="/page/website.contactus" class="btn st-btn-primary btn-lg">
+                                                    Register
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="st-comparison col-md-4 col-lg-4 col-xs-12 oe_cu_c2 d-flex align-item-center justify-content-center post"
+                                         data-vp-add-class="visible animated zoomIn"
+                                         data-vp-remove-class="hidebefore" data-vp-add-class-full-view="full-visible"
+                                         data-vp-repeat="false" data-vp-offset="100">
+                                        <div class="panel panel-primary mx-auto">
+                                            <div class="panel-heading text-center">
+                                                <h3 style="margin: 0">MONTHLY</h3>
+                                                <span>$10</span>
+                                            </div>
+                                            <ul class="list-group">
+                                                <li class="list-group-item">60 day free trial</li>
+                                                <li class="list-group-item">Functional Offline</li>
+                                                <li class="list-group-item">Synced to cloud database</li>
+                                                <li class="list-group-item">No support</li>
+                                            </ul>
+
+                                            <div class="text-center bg_white">
+                                                <a href="/page/website.contactus" class="btn st-btn-primary btn-lg">
+                                                    Register
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="st-comparison col-md-4 col-lg-4 col-xs-12 text-center post d-flex align-item-center justify-content-center"
+                                         data-vp-add-class="visible animated zoomIn"
+                                         data-vp-remove-class="hidebefore" data-vp-add-class-full-view="full-visible"
+                                         data-vp-repeat="false" data-vp-offset="100">
+
+                                        <div class="panel panel-info">
+
+                                            <div class="panel-heading text-center">
+                                                <h4 style="margin: 0">YEARLY</h4>
+                                                <span>$80</span>
+                                            </div>
+                                            <ul class="list-group">
+                                                <li class="list-group-item">60 day free trial</li>
+                                                <li class="list-group-item">Functional Offline</li>
+                                                <li class="list-group-item">Synced to cloud database</li>
+                                                <li class="list-group-item">No support</li>
+                                            </ul>
+
+                                            <div class="text-center">
+                                                <a href="/page/website.contactus" class="btn st-btn-primary btn-lg">
+                                                    Register
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </xpath>
+            </template>
+
+            <!-- Features > References -->
+            <template id="s_references_inherit" inherit_id="website.s_references" name="References">
+                <xpath expr="//section" position="replace">
+                    <section class="oe_snippet_body s_references carousel_testimonial master_background">
+                        <div class="container">
+                            <div class="st-reference row">
+                                <div class="st_title post w-100 mt-5" data-vp-add-class="visible animated zoomIn"
+                                     data-vp-remove-class="hidebefore" data-vp-add-class-full-view="full-visible"
+                                     data-vp-repeat="false" data-vp-offset="100">
+                                    <div class="st-heading-a">
+                                        <h3 class="text-center small">Testimonials</h3>
+                                        <h3 class="text-center">
+                                            <span class="strong">Review</span>
+                                            of customers
+                                        </h3>
+                                    </div>
+                                    <hr/>
+                                </div>
+                                <!-- Indicators -->
+                                <div id="myCarousel"
+                                     class="s_carousel_default carousel slide carousel carousel_testimonial slide mb32 post w-100 d-flex justify-content-center align-item-center"
+                                     data-vp-add-class="visible animated zoomIn"
+                                     data-vp-remove-class="hidebefore" data-vp-add-class-full-view="full-visible"
+                                     data-vp-repeat="false" data-vp-offset="100">
+                                    <div class="carousel-inner w-70">
+                                        <div class="carousel-item active"
+                                             data-name="Slide">
+                                            <div class="container">
+                                                <div class="row content">
+                                                    <div class="carousel-img col-md-4">
+                                                        <img class="img-responsive"
+                                                             src="/sync_uppercrust_theme/static/src/img/team1.png"
+                                                             alt="Banner Odoo Image"/>
+                                                    </div>
+                                                    <div class="carousel-content col-md-8 col-sm-12">
+                                                        <div class="text p-3">
+                                                            <h4>
+                                                                <span class="strong">John Smith</span>
+                                                                <br/>
+                                                                <span class="small">Digital designer</span>
+                                                            </h4>
+                                                            <p>Consectetuer adipiscing elit, sed diam nonummy nibh
+                                                                euismod tincidunt ut laoreet dolore magna aliquam erat.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-control carousel-control-prev left d-none w-15"
+                                         data-target="#myCarousel_testimonial"
+                                         data-slide="prev" title="Previous">
+                                        <i class="fa fa-arrow-circle-o-left "/>
+                                    </div>
+                                    <div class="carousel-control carousel-control-next right d-none w-15"
+                                         data-target="#myCarousel_testimonial"
+                                         data-slide="next" title="Next">
+                                        <i class="fa fa-arrow-circle-o-right"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </xpath>
+            </template>
+
+            <template id="snippets_inherit" inherit_id="website.snippets">
+                <xpath expr="//div[@id='snippet_content']/div[hasclass('o_panel_body')]" position="inside">
+                    <t t-snippet="sync_uppercrust_theme.s_blank_column"
+                       t-thumbnail="/sync_uppercrust_theme/static/src/img/icon/blank.png"/>
+                    <t t-snippet="sync_uppercrust_theme.s_page_title"
+                       t-thumbnail="/sync_uppercrust_theme/static/src/img/icon/title.png"/>
+                    <t t-snippet="sync_uppercrust_theme.s_well"
+                       t-thumbnail="/sync_uppercrust_theme/static/src/img/icon/well.png"/>
+                    <t t-snippet="sync_uppercrust_theme.s_team_member"
+                       t-thumbnail="/sync_uppercrust_theme/static/src/img/icon/teammember.png"/>
+                    <t t-snippet="sync_uppercrust_theme.s_image"
+                       t-thumbnail="/sync_uppercrust_theme/static/src/img/icon/image.png"/>
+                </xpath>
+            </template>
+
+            <!-- Customize Options -->
+
+            <template id="uppercrust_snippet_options" inherit_id="website.snippets">
+                <xpath expr="//div[@id='snippet_options']" position="inside">
+                    <div data-js="s_title_hr" data-selector="hr" data-no-check="true">
+                        <we-collapse-area>
+                            <we-toggler><i class="fa fa-fw fa-font"/> Colors</we-toggler>
+                            <we-collapse>
+                                <we-button data-select-class="color-st-uppercrust">Uppercrust</we-button>
+                                <we-button data-select-class="color-darken">Darken</we-button>
+                                <we-button data-select-class="color-success">Success</we-button>
+                                <we-button data-select-class="color-danger">Danger</we-button>
+                            </we-collapse>
+                        </we-collapse-area>
+                        <we-collapse-area>
+                            <we-toggler><i class="fa fa-fw fa-font"/> Alignment</we-toggler>
+                            <we-collapse>
+                                <we-button data-select-class="float-left">Left</we-button>
+                                <we-button data-select-class="float-center">Center</we-button>
+                                <we-button data-select-class="float-right">Right</we-button>
+                            </we-collapse>
+                        </we-collapse-area>
+                    </div>
+                    <!-- Progressbar Customize Options-->
+                    <div data-js='s_progressbar'
+                    data-selector=".st-progressbar">
+                        <div data-customize="true" class="cu-progressbar">
+                            <we-button  data-no-preview="true">
+                                <i class="fa fa-fw fa-facebook"/> Progressbar Customize
+                            </we-button>
+                        </div>
+                    </div>
+
+                    <!-- Counter Customize Options-->
+                    <div data-js='s_counter'
+                    data-selector=".s_counter #odometer">
+                        <div data-customize="true" class="cu-counter">
+                            <we-button  data-change="true" data-no-preview="true">
+                                <i class="fa fa-fw fa-facebook"/> Counter Customize
+                            </we-button>
+                        </div>
+                    </div>
+                    <div data-js="custom_gallery" data-selector=".o_gallery_custom">
+                        <we-button data-add-images="true" data-no-preview="true">
+                            <i class="fa fa-fw fa-plus-circle"/> Add images
+                        </we-button>
+                    </div>
+                </xpath>
+            </template>
+
+            <template id="colorpicker_inherit" inherit_id="web_editor.colorpicker">
+                <xpath expr="//button[@data-color='alpha']" position="after">
+                    <button data-color="uppercrust_default"/>
+                    <button data-color="uppercrust_grey"/>
+                </xpath>
+            </template>
+            <template id="snippet_options_inherit" inherit_id="website.snippet_options">
+                <xpath expr="//div[@id='so_content_addition']" position="replace">
+                    <div id="so_content_addition" data-selector=".s_title,.s_text_block, .s_counter, .s_progressbar, .s_image, .s_team_member, blockquote, .well, .s_panel, .oe_share, .o_image_floating, .s_panel, .oe_share, .s_hr, .s_btn, #odometer, .s_card, .o_facebook_page, .s_alert, .s_share, .s_rating, .s_wsale_products_searchbar_input" data-drop-near=".s_title, .s_counter, .s_progressbar, .s_image, .s_team_member, p, h1, h2, h3, hr, blockquote, .well, .s_panel, .oe_share, .s_hr, .s_btn, .s_card, .o_facebook_page, .s_alert, .s_share, .s_rating, .s_wsale_products_searchbar_input, #odometer" data-drop-in=".content"/>
+                </xpath>
+                <xpath expr="." position="inside">
+                    <div data-js='s_counter'
+                         data-selector=".s_counter #odometer"
+                         data-drop-in=".oe_structure, [data-oe-type=html]">
+                    </div>
+                    <div data-js='s_separator'
+                         data-selector="hr"
+                         data-drop-in=".oe_structure, [data-oe-type=html]">
+                    </div>
+                    <div data-js='s_title_hr'
+                         data-selector="hr"
+                         data-drop-in=".oe_structure, [data-oe-type=html]">
+                    </div>
+                </xpath>
+            </template>
+        </data>
+    </odoo>

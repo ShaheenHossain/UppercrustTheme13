@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Content > Counter -->
+        <template id="s_counter" name="Counter">
+            <section class="oe_snippet_body s_counter" style="background-image: url('/sync_uppercrust_theme/static/src/img/bg.jpg');">
+                <div class="container pt-4 pb-4">
+                    <div class="row">
+                        <div class="col-md-12 up_title">
+                            <div class="oe_structure mt-2"/>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="s_counter text-center st-counter post-start" data-vp-add-class="visible animated zoomIn" data-vp-remove-class="hidebefore" data-vp-add-class-full-view="full-visible" data-vp-repeat="false" data-vp-offset="100">
+                                <div>
+                                    <i class="fa fa-download fa-2x"></i>
+                                </div>
+                                <div id="odometer" stop-counter='500'
+                                     class="st_master_text_color odometer">0
+                                </div>
+                                <div class="counter_text">Downloads</div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="s_counter text-center st-counter post-start" data-vp-add-class="visible animated zoomIn" data-vp-remove-class="hidebefore" data-vp-add-class-full-view="full-visible" data-vp-repeat="false" data-vp-offset="100">
+                                <div>
+                                    <i class="fa fa-download fa-2x"></i>
+                                </div>
+                                <div id="odometer" stop-counter='500'
+                                     class="st_master_text_color odometer">0
+                                </div>
+                                <div class="counter_text">Downloads</div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="s_counter text-center st-counter post-start" data-vp-add-class="visible animated zoomIn" data-vp-remove-class="hidebefore" data-vp-add-class-full-view="full-visible" data-vp-repeat="false" data-vp-offset="100">
+                                <div>
+                                    <i class="fa fa-download fa-2x"></i>
+                                </div>
+                                <div id="odometer" stop-counter='500'
+                                     class="st_master_text_color odometer">0
+                                </div>
+                                <div class="counter_text">Downloads</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <template id="snippets_inherit_counter" inherit_id="website.snippets">
+            <xpath expr="//div[@id='snippet_content']/div[hasclass('o_panel_body')]" position="inside">
+                <t t-snippet="sync_uppercrust_theme.s_progressbar"
+                   t-thumbnail="/sync_uppercrust_theme/static/src/img/icon/progress.png"/>
+            </xpath>
+        </template>
+    </data>
+</odoo>

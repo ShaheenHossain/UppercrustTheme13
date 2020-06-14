@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<template id="s_image_gallery_custom" name="Image Gallery">
+            <section class="o_gallery_custom o_spc-medium s_image_gallery_custom mb-3 mt-3">
+                <div class="container">
+                    <div class="alert alert-info css_non_editable_mode_hidden text-center" role="status"><span class="o_add_images" style="cursor: pointer;"><i class="fa fa-plus-circle"/> Add Images</span></div>
+                </div>
+                <div class="container">
+                	<div class="image_box row">
+                	</div>
+                </div>
+                <div class="o_main_ps">
+                    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+                        <div class="pswp__bg"></div>
+                        <div class="pswp__scroll-wrap">
+                            <div class="pswp__container">
+                                <div class="pswp__item"></div>
+                                <div class="pswp__item"></div>
+                                <div class="pswp__item"></div>
+                            </div>
+                            <div class="pswp__ui pswp__ui--hidden">
+                                <div class="pswp__top-bar">
+                                    <div class="pswp__counter"></div>
+                                    <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                                    <button class="pswp__button pswp__button--share" title="Share"></button>
+                                    <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                                    <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                                    <div class="pswp__preloader">
+                                        <div class="pswp__preloader__icn">
+                                          <div class="pswp__preloader__cut">
+                                            <div class="pswp__preloader__donut"></div>
+                                          </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                                    <div class="pswp__share-tooltip"></div>
+                                </div>
+                                <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+                                </button>
+                                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+                                </button>
+                                <div class="pswp__caption">
+                                    <div class="pswp__caption__center"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <template id="snippets_inherit_gallary" inherit_id="website.snippets">
+            <xpath expr="//div[@id='snippet_feature']/div[hasclass('o_panel_body')]" position="inside">
+                <t t-snippet="sync_uppercrust_theme.s_image_gallery_custom" t-thumbnail="/sync_uppercrust_theme/static/src/img/icon/gallery.png"/>
+            </xpath>
+        </template>
+    </data>
+</odoo>

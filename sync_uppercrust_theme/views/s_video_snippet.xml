@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+    <!-- Features > Video Player -->
+        <template id="s_video" name="Video Player">
+            <section class="oe_snippet_body s_video">
+                <div class="w-100">
+                    <div class="st-video">
+                        <div class="video_container w-100">
+                            <div class="st_title">
+                                <div class="st-heading-a">
+                                    <h3 class="text-center small">DEMO</h3>
+                                    <h3 class="text-center">
+                                        <span class="strong">Lorem ipsum</span>
+                                        dolor sit amet
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="text-center oe_cu_pos_rel">
+                                <img class="oe_cu_video_img oe_cu_pos_rel" src="/sync_uppercrust_theme/static/src/img/videobg.jpg"/>
+                                <div class="video_link">
+                                   <a href="https://www.youtube.com/v/0GUxV85DDm4">
+                                        <img class="oe_cu_play_ico" src="/sync_uppercrust_theme/static/src/img/play.png"/>
+                                    </a>
+                                </div>
+
+                            </div>
+                            <div id="video_modal" class="modal fade">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-body">
+                                            <button type="button" class="close" data-dismiss="modal">&amp;times;
+                                            </button>
+                                            <embed id="inlineVideo" src="https://www.youtube.com/v/0GUxV85DDm4"
+                                                   type="application/x-shockwave-flash" width="680" height="490"
+                                                   wmode="transparent" allowfullscreen="true"
+                                                   allowscriptaccess="always"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <template id="snippets_inherit_video" inherit_id="website.snippets">
+            <xpath expr="//div[@id='snippet_feature']/div[hasclass('o_panel_body')]" position="inside">
+                <t t-snippet="sync_uppercrust_theme.s_video"
+                   t-thumbnail="/sync_uppercrust_theme/static/src/img/icon/video.png"/>
+                <t t-snippet="sync_uppercrust_theme.s_image_gallery_custom" t-thumbnail="/sync_uppercrust_theme/static/src/img/icon/gallery.png"/>
+            </xpath>
+        </template>
+        <template id="s_video_assets_editor" inherit_id="website.assets_editor" name="Video Editor">
+            <xpath expr="." position="inside">
+                <script type="text/javascript" src="/sync_uppercrust_theme/static/src/js/s_video_editor.js"/>
+            </xpath>
+        </template>
+    </data>
+</odoo>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="web_editor.gallery.image">
+        <div class="oe_snippet_body">
+            <div class="oe_fader">
+                <div class="text">
+                    <h4 class="mt-2 mb-2"><strong>Lorem Ipsum</strong></h4>
+                    <p class="mt-2 mb-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    <span class="fa fa-search-plus gallery_zoom"></span>
+                </div>
+                <img src="/sync_uppercrust_theme/static/src/img/img-placeholder.jpg" class="product_detail_img"/>
+            </div>
+        </div>
+    </t>
+</templates>
