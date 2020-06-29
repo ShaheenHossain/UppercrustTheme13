@@ -1,0 +1,39 @@
+0.1.12
+======
+* Fix bug that can occur when minifying two pages in a row when the
+  first page has a dangling tag.
+
+0.1.11
+======
+* Fix XSS
+* Add support for a 'pre' attribute prefix
+* Remove redundat 'lang' tags
+  (thanks mina86)
+* Fixed IndexError when data is empty
+  (thanks mercuree)
+
+0.1.10
+======
+* Fix bug in Python 3.5 where char refs were being improperly escaped
+  (thanks tenzer)
+
+0.1.9
+=====
+* Fix bug introduced in 0.1.7 involving spaces in attribute values
+
+
+0.1.8
+=====
+* Fix bug introduced in 0.1.7 involving repeated ampersands.
+
+0.1.7
+=====
+* Improved attribute escaping. Greatly improves compression.
+
+0.1.6
+=====
+* Always quote attributes that end in "/". (Thanks nvie)
+* Use StringIO to speed up string building. (Thanks nvie)
+* Typo fixes in documentation. (Thanks aabrahamowicz and Namibnat)
+* Keep Microsoft's conditional comments. (Thanks mreinhardt)
+* Properly handle empty comments. (Thanks Epsirom)
