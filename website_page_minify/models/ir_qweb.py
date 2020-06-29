@@ -2,7 +2,7 @@
 from odoo import api, models
 
 from odoo.addons.base.models.qweb import QWeb
-#from odoo.src.user.website_page_minify.htmlmin.htmlmin import main
+from odoo.addons.website_page_minify.htmlmin.htmlmin import main
 
 class IrQWeb(models.AbstractModel, QWeb):
     _inherit = 'ir.qweb'
